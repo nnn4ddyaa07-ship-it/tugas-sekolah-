@@ -1,50 +1,39 @@
 let nomor = 1;
 
-function tambahData() {
+document.getElementById("formSiswa").addEventListener("submit", function(event) {
 
-    let nama = document.getElementById("nama").value;
-    let nis = document.getElementById("nis").value;
-    let kelas = document.getElementById("kelas").value;
-    let jurusan = document.getElementById("jurusan").value;
+    event.preventDefault();
 
-    // Mengecek data
-    if (nama === "" || nis === "" || kelas === "" || jurusan === "") {
-        alert("Data siswa harus diisi lengkap!");
+    const nama = document.getElementById("nama").value.trim();
+    const kelas = document.getElementById("kelas").value.trim();
+    const jurusan = document.getElementById("jurusan").value.trim();
+
+    if (nama === "" || kelas === "" || jurusan === "") {
+        alert("Data belum lengkap!");
         return;
     }
 
-    // Membuat baris baru
-    let tabel = document.getElementById("tabelSiswa");
+    const tabel = document.getElementById("tabelSiswa");
 
-    let baris = tabel.insertRow();
+    const baris = document.createElement("tr");
 
-    baris.insertCell(0).innerHTML = nomor;
-    baris.insertCell(1).innerHTML = nama;
-    baris.insertCell(2).innerHTML = nis;
-    baris.insertCell(3).innerHTML = kelas;
-    baris.insertCell(4).innerHTML = jurusan;
+    baris.innerHTML = `
+        <td>${nomor}</td>
+        <td>${nama}</td>
+        <td>${kelas}</td>
+        <td>${jurusan}</td>
+        <td>
+            <button onclick="hapusData(this)">Hapus</button>
+        </td>
+    `;
 
-    let aksi = baris.insertCell(5);
-
-    aksi.innerHTML =
-        '<button class="hapus" onclick="hapusData(this)">Hapus</button>';
+    tabel.appendChild(baris);
 
     nomor++;
 
-    // Mengosongkan form
-    document.getElementById("nama").value = "";
-    document.getElementById("nis").value = "";
-    document.getElementById("kelas").value = "";
-    document.getElementById("jurusan").value = "";
+    document.getElementById("formSiswa").reset();
+});
 
-    alert("Data siswa berhasil ditambahkan!");
-}
-
-function hapusData(tombol) {
-
-    let baris = tombol.parentElement.parentElement;
-
-    baris.remove();
-
-    alert("Data siswa berhasil dihapus!");
+function hapusData(button) {
+    button.parentElement.parentElement.remove();
 }
