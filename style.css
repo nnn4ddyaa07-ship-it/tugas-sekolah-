@@ -1,0 +1,297 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #eaf4ff;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2676c9;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.form-box {
+    background: #f5f9ff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd9e8;
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #2676c9;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #2676c9;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #195d9e;
+}
+
+h2 {
+    color: #2676c9;
+    margin-bottom: 15px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #2676c9;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f5f9ff;
+}
+
+.hapus {
+    background: #e74c3c;
+    padding: 7px 12px;
+    margin: 0;
+    width: auto;
+    font-size: 14px;
+}
+
+.hapus:hover {
+    background: #c0392b;
+}
+.materi {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 800px;
+  background: #f0f8ff;
+  border-radius: 15px;
+}
+
+.materi h2 {
+  color: #2878a8;
+}
+
+.materi pre {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+.flowchart-section {
+  text-align: center;
+  margin: 40px auto;
+  padding: 25px;
+}
+
+.flowchart-section h2 {
+  margin-bottom: 30px;
+}
+
+.flowchart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flow-box {
+  width: 200px;
+  min-height: 55px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background: white;
+  border: 3px solid #333;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+.flow-box.start {
+  width: 150px;
+  border-radius: 30px;
+}
+
+.arrow {
+  font-size: 30px;
+  font-weight: bold;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.decision {
+  width: 150px;
+  height: 150px;
+  border: 3px solid #333;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  margin: 20px;
+}
+
+.decision span {
+  transform: rotate(-45deg);
+  font-weight: bold;
+}
+
+.branches {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 20px;
+}
+
+.branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.branch b {
+  font-size: 16px;
+}
+<style>
+.alur-tugas {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.alur-tugas h2 {
+  text-align: center;
+  margin-top: 35px;
+  color: #245b91;
+}
+
+.alur-tugas pre {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  overflow-x: auto;
+  border: 1px solid #b8d9f5;
+}
+
+.flowchart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flow-box {
+  width: 210px;
+  min-height: 60px;
+  padding: 12px;
+  background: white;
+  border: 3px solid #26384a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.flow-box.start {
+  border-radius: 30px;
+}
+
+.arrow {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.decision {
+  width: 130px;
+  height: 130px;
+  background: white;
+  border: 3px solid #26384a;
+  transform: rotate(45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+}
+
+.decision span {
+  transform: rotate(-45deg);
+  font-weight: bold;
+}
+
+.branches {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}

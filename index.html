@@ -1,1 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Siswa</title>
+  
+    <link rel="stylesheet" href="style.css">
+</head>
+<section class="materi">
+  <h2>Algoritma</h2>
+  <ol>
+    <li>Mulai.</li>
+    <li>Buka halaman Data Siswa.</li>
+    <li>Isi data siswa.</li>
+    <li>Klik tombol Tambah/Simpan.</li>
+    <li>Sistem memeriksa kelengkapan data.</li>
+    <li>Jika lengkap, data ditambahkan ke tabel.</li>
+    <li>Jika tidak lengkap, tampilkan pesan kesalahan.</li>
+    <li>Selesai.</li>
+  </ol>
 
+  <h2>Pseudocode</h2>
+  <pre>
+BEGIN
+  Tampilkan halaman Data Siswa
+  INPUT nama
+  INPUT NIS
+  INPUT kelas
+  INPUT jurusan
+
+  IF data lengkap THEN
+      Tambahkan data ke tabel
+      Tampilkan "Data berhasil ditambahkan"
+  ELSE
+      Tampilkan "Data harus diisi lengkap"
+  END IF
+END
+  </pre>
+
+  <h2>Flowchart</h2>
+  <p>
+    MULAI → Buka Web → Isi Data → Klik Simpan
+    → Cek Data → Data Lengkap?
+    → Ya: Tambahkan ke Tabel
+    → Tidak: Tampilkan Pesan Error → SELESAI
+  </p>
+</section>
+<body>
+
+    <div class="container">
+<section class="flowchart-section">
+  <h2>Flowchart Data Siswa</h2>
+
+  <div class="flowchart">
+
+    <div class="flow-box start">MULAI</div>
+    <div class="arrow">↓</div>
+
+    <div class="flow-box">
+      Buka Web Data<br>
+      Siswa
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="flow-box">
+      Isi Data Siswa
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="flow-box">
+      Klik Tambah /<br>
+      Simpan
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="decision">
+      <span>Data lengkap?</span>
+    </div>
+
+    <div class="branches">
+      <div class="branch">
+        <b>Ya ↓</b>
+        <div class="flow-box">
+          Data masuk<br>
+          ke tabel
+        </div>
+      </div>
+
+      <div class="branch">
+        <b>Tidak ↓</b>
+        <div class="flow-box">
+          Tampilkan<br>
+          pesan error
+        </div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="flow-box">
+      Tampilkan Data<br>
+      Siswa
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="flow-box start">SELESAI</div>
+
+  </div>
+</section>
+        <h1>📚 Data Siswa</h1>
+        <p class="subtitle">Aplikasi sederhana untuk mengelola data siswa</p>
+
+        <div class="form-box">
+
+            <label>Nama Siswa</label>
+            <input type="text" id="nama" placeholder="Nadya Julianti">
+
+            <label>NIS</label>
+            <input type="text" id="nis" placeholder="085776320558">
+
+            <label>Kelas</label>
+            <input type="text" id="kelas" placeholder="XI RPL 1">
+
+            <label>Jurusan</label>
+            <input type="text" id="jurusan" placeholder=" Rekayasa Perangkat Lunak">
+
+            <button onclick="tambahData()">Tambah Data</button>
+
+        </div>
+
+        <h2>Daftar Siswa</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>NIS</th>
+                        <th>Kelas</th>
+                        <th>Jurusan</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelSiswa">
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
